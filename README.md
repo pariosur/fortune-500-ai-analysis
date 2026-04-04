@@ -15,5 +15,5 @@ Dataset tracking AI mentions in Fortune 500 company filings from 2022 to 2025.
 
 - `fortune500_ai_mentions_2022.csv`
 - `fortune500_ai_mentions_2023.csv`
-- `fortune500_ai_mentiona_2024.csv`
+- `fortune500_ai_mentions_2024.csv`
 - `fortune500_ai_mentions_2025.csv`
