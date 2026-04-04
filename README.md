@@ -1,6 +1,6 @@
-# Fortune 500 AI Mentions (2022–2025)
+# Fortune 500 AI Mentions in SEC 10-K Filings (2022–2025)
 
-Dataset tracking AI mentions in SEC 10-K filings across the Fortune 500 from 2022 to 2025.
+Dataset tracking AI and Generative AI mentions in SEC 10-K filings across the Fortune 500 from 2022 to 2025.
 
 ## Summary
 
@@ -33,17 +33,27 @@ Dataset tracking AI mentions in SEC 10-K filings across the Fortune 500 from 202
 | Revenue Growth Pct | Year-over-year revenue growth |
 | AI Mentions | Total count of AI-related terms |
 | GenAI Mentions | Count of generative AI-specific terms |
-| Classification | `Risk`, `Benefit`, or `Both` |
+| Classification | `Risk`, `Benefit`, `Both`, or `No AI Mention` |
 
 ## Methodology
 
-**Data Source:** SEC 10-K filings for Fortune 500 companies, fiscal years 2022–2025
+**Data Source:** SEC 10-K/20-F filings for Fortune 500 companies, fiscal years 2022–2025, downloaded from EDGAR and processed through [Metal](https://metal.ai).
 
-**AI Terms:** "artificial intelligence," "machine learning," "deep learning," "neural network"
+**AI Terms searched** (regex, case-insensitive):
+- "artificial intelligence"
+- "A.I." / "AI" (standalone, with or without periods)
+- "machine learning" (standalone "ML" excluded due to false positives)
+- "deep learning"
+- "neural network"
 
-**GenAI Terms:** "generative AI," "generative artificial intelligence," "LLM," "large language model," "GPT"
+**GenAI Terms searched** (regex, case-insensitive):
+- "generative AI" / "GenAI" / "generative artificial intelligence"
+- "LLM" / "large language model"
+- "GPT" / "ChatGPT"
 
-**Classification:** Companies were classified based on whether AI appears in risk factor sections only, business/opportunity sections only, or both.
+**Mention Counting:** Regex-based search across full filing text. Each mention was mapped to its 10-K section (e.g., Item 1 Business, Item 1A Risk Factors, Item 7 MD&A) via section header parsing.
+
+**Classification:** An LLM-powered workflow classified each company as `Risk`, `Benefit`, `Both`, or `No AI Mention` based on the filing content, and extracted representative quotes for each category.
 
 ## Analysis
 
