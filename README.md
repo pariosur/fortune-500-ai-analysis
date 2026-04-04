@@ -55,4 +55,4 @@ This dataset is released under [CC-BY-4.0](https://creativecommons.org/licenses/
 
 ## Author
 
-[Pablo Rios](https://github.com/pariosur) · [Metal](https://metal.ai)
+[Pablo Rios](https://github.com/pariosur) 
