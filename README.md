@@ -57,7 +57,7 @@ Dataset tracking AI and Generative AI mentions in SEC 10-K filings across the Fo
 
 ## Analysis
 
-Full analysis with charts and insights: [dev.to/pariosur](https://dev.to/pariosur) *(coming soon)*
+Full analysis with charts and insights: [Fortune 500 AI Disclosure Analysis](https://dev.to/riospablo/fortune-500-ai-disclosure-analysis-how-americas-largest-companies-talk-about-ai-in-sec-filings-5531)
 
 ## License
 
